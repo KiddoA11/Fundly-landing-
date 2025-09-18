@@ -1,0 +1,107 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+/* Color variables */
+:root {
+  --green-600: #2d6a4f;
+  --green-700: #1b4332;
+  --green-100: #e9f5ef;
+  --ivory: #f5f1e8;
+  --ink: #263238;
+  --radius: 14px;
+}
+
+/* Reset basics */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: #fafafa;
+}
+
+/* Header styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.header .brand {
+  height: 40px;
+}
+.header nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+.header nav .btn {
+  background: var(--green-600);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+/* Hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 64px 20px;
+  background: linear-gradient(180deg, var(--green-100), #ffffff);
+}
+.hero h1 {
+  font-family: Poppins, Inter, sans-serif;
+  color: var(--green-700);
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+}
+.hero p {
+  margin: 0 0 16px;
+}
+#waitlist {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#waitlist input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border: 1px solid #d7e2dc;
+  border-radius: var(--radius);
+}
+#waitlist button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--green-600);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.note {
+  font-size: .85rem;
+  opacity: .7;
+  margin-top: 8px;
+}
+.hero-visual img {
+  width: 140px;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+}
+
+/* Desktop adjustments */
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    padding: 96px 48px;
+  }
+}
