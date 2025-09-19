@@ -1,3 +1,4 @@
+/* ===== CSS VARIABLES ===== */
 :root {
        --green-600: #2d6a4f;
        --green-700: #1b4332;
