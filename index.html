@@ -21,8 +21,7 @@
       <header class="header" role="banner">
           <nav class="nav" aria-label="Main navigation">
               <div class="nav-brand">
-                  <img src="assets/fundly-app-icon.png" alt="Fundly" class="nav-logo" width="40"
-   height="40">
+                  <img src="assets/fundly-app-icon.png" alt="Fundly" class="nav-logo">
                   <span class="nav-wordmark">Fundly</span>
               </div>
               <button class="nav-toggle" aria-label="Toggle navigation menu" 
@@ -49,6 +48,8 @@
               <div class="container">
                   <div class="hero-content">
                       <div class="hero-text">
+                          <img src="assets/fundly-app-icon.png" alt="Fundly" 
+  class="hero-logo-icon">
                           <h1 class="hero-title">Save Smarter, Together.</h1>
                           <p class="hero-subtitle">Join thousands of students who are reaching
   their financial goals faster through collective saving. Create groups, set targets, and watch
@@ -85,43 +86,40 @@
                           </form>
                       </div>
 
-                      <!-- iPhone Mockup (WHITE) -->
+                      <!-- iPhone Mockup -->
                       <div class="hero-visual">
                           <div class="phone-mockup">
-                              <svg class="iphone" viewBox="0 0 380 760" fill="none" 
+                              <svg class="iphone" viewBox="0 0 320 640" fill="none" 
   xmlns="http://www.w3.org/2000/svg">
-                                  <!-- Phone Frame (WHITE) -->
-                                  <rect x="10" y="10" width="360" height="740" rx="70" 
-  fill="#f8f9fa" stroke="#e5e7eb" stroke-width="2"/>
+                                  <!-- Phone Frame -->
+                                  <rect x="8" y="8" width="304" height="624" rx="60" 
+  fill="#1a1a1a" stroke="#2a2a2a" stroke-width="2"/>
 
                                   <!-- Screen -->
-                                  <rect x="20" y="20" width="340" height="720" rx="60" 
-  fill="#000"/>
+                                  <rect x="16" y="16" width="288" height="608" rx="52" 
+  fill="#ffffff"/>
 
-                                  <!-- Dynamic Island (Lighter black for contrast) -->
-                                  <rect x="140" y="40" width="100" height="40" rx="20" 
-  fill="#2a2a2a"/>
+                                  <!-- Dynamic Island -->
+                                  <rect x="120" y="32" width="80" height="32" rx="16" 
+  fill="#1a1a1a"/>
 
                                   <!-- Volume Buttons -->
-                                  <rect x="0" y="160" width="10" height="35" rx="5" 
-  fill="#d1d5db"/>
-                                  <rect x="0" y="210" width="10" height="35" rx="5" 
-  fill="#d1d5db"/>
+                                  <rect x="0" y="140" width="8" height="28" rx="4" fill="#333"/>
+                                  <rect x="0" y="180" width="8" height="28" rx="4" fill="#333"/>
 
                                   <!-- Action Button -->
-                                  <rect x="0" y="260" width="10" height="30" rx="5" 
-  fill="#d1d5db"/>
+                                  <rect x="0" y="220" width="8" height="24" rx="4" fill="#333"/>
 
                                   <!-- Power Button -->
-                                  <rect x="370" y="240" width="10" height="45" rx="5" 
-  fill="#d1d5db"/>
+                                  <rect x="312" y="200" width="8" height="36" rx="4" 
+  fill="#333"/>
 
                                   <!-- Screen Content -->
-                                  <foreignObject x="30" y="100" width="320" height="580">
+                                  <foreignObject x="24" y="80" width="272" height="480">
                                       <div class="phone-screen">
                                           <div class="app-bar">
                                               <img src="assets/fundly-app-icon.png" alt="Fundly"
-   class="app-icon" width="28" height="28">
+   class="app-icon">
                                               <span class="app-title">Fundly</span>
                                           </div>
 
@@ -131,12 +129,15 @@
 
                                               <div class="members">
                                                   <div class="member-avatars">
+                                                      <div class="avatar">L</div>
                                                       <div class="avatar">A</div>
-                                                      <div class="avatar">B</div>
-                                                      <div class="avatar">C</div>
-                                                      <div class="avatar-more">+2</div>
+                                                      <div class="avatar">E</div>
                                                   </div>
-                                                  <span class="member-count">5 members</span>
+                                                  <div class="member-names">
+                                                      <span class="member-name">Lily</span>
+                                                      <span class="member-name">Ali</span>
+                                                      <span class="member-name">Ellie</span>
+                                                  </div>
                                               </div>
 
                                               <div class="goal">
@@ -168,75 +169,37 @@
               </div>
           </section>
 
-          <!-- How It Works Section (SYMMETRICAL PROFESSIONAL DESIGN) -->
+          <!-- How It Works Section -->
           <section id="how-it-works" class="section">
               <div class="container">
                   <header class="section-header">
                       <h2 class="section-title">How It Works</h2>
-                      <p class="section-subtitle">Three simple steps to start saving smarter
-  with your friends</p>
                   </header>
-                  <div class="steps-container">
-                      <div class="step-card">
-                          <div class="step-number">01</div>
+                  <div class="stepper">
+                      <div class="step">
+                          <div class="step-number">1</div>
                           <div class="step-content">
-                              <div class="step-icon">
-                                  <!-- Users with search icon (inspired by 👥) -->
-                                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                      <circle cx="9" cy="7" r="4"/>
-                                      <path d="m22 21-3-3m0 0a5.5 5.5 0 1 0-7.78-7.78 5.5 5.5 0 
-  0 0 7.78 7.78Z"/>
-                                  </svg>
-                              </div>
                               <h3 class="step-title">Create or Join</h3>
-                              <p class="step-description">Start a collection pot with friends or
-   join existing groups with shared financial goals.</p>
+                              <p class="step-text">Start a collection pot with friends or join
+  existing groups with shared financial goals.</p>
                           </div>
                       </div>
-
                       <div class="step-connector"></div>
-
-                      <div class="step-card">
-                          <div class="step-number">02</div>
+                      <div class="step">
+                          <div class="step-number">2</div>
                           <div class="step-content">
-                              <div class="step-icon">
-                                  <!-- Dollar sign with flowing design (inspired by 💰) -->
-                                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                      <circle cx="12" cy="12" r="10"/>
-                                      <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
-                                      <path d="M12 18V6"/>
-                                  </svg>
-                              </div>
                               <h3 class="step-title">Contribute Together</h3>
-                              <p class="step-description">Everyone contributes what they can
-  afford. Flexible amounts with complete transparency.</p>
+                              <p class="step-text">Everyone contributes what they can afford.
+  Flexible amounts with complete transparency.</p>
                           </div>
                       </div>
-
                       <div class="step-connector"></div>
-
-                      <div class="step-card">
-                          <div class="step-number">03</div>
+                      <div class="step">
+                          <div class="step-number">3</div>
                           <div class="step-content">
-                              <div class="step-icon">
-                                  <!-- Target with arrow (inspired by 🎯) -->
-                                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                      <circle cx="12" cy="12" r="10"/>
-                                      <circle cx="12" cy="12" r="6"/>
-                                      <circle cx="12" cy="12" r="2"/>
-                                      <path d="M12 2v4"/>
-                                      <path d="M12 18v4"/>
-                                      <path d="M2 12h4"/>
-                                      <path d="M18 12h4"/>
-                                  </svg>
-                              </div>
                               <h3 class="step-title">Reach Goals Faster</h3>
-                              <p class="step-description">Vote on withdrawal order and access
-  funds when it's your turn to receive.</p>
+                              <p class="step-text">Vote on withdrawal order and access funds
+  when it's your turn to receive.</p>
                           </div>
                       </div>
                   </div>
@@ -252,13 +215,9 @@
                   <div class="cards">
                       <div class="card">
                           <div class="card-icon">
-                              <!-- Checkmark with hand (inspired by 🤝) -->
-                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="M7 12l3 3 7-7"/>
-                                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                                  <path d="M3 5v14c0 1.1.9 2 2 2h14c0-1.1-.9-2-2-2V5"/>
-                                  <path d="M5 5h14"/>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 6 9 17l-5-5"/>
                               </svg>
                           </div>
                           <h3 class="card-title">Social Accountability</h3>
@@ -267,14 +226,11 @@
                       </div>
                       <div class="card">
                           <div class="card-icon">
-                              <!-- Flexible arrows (inspired by 🔄) -->
-                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
-                                  <path d="M21 3v5h-5"/>
-                                  <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 
-  16"/>
-                                  <path d="M8 16H3v5"/>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M3 3v18h18"/>
+                                  <path d="M18.7 8a3 3 0 0 0-5.4 0c-1.3 1.3-1.3 3.4 0 4.7a3 3 0 
+  0 0 5.4 0"/>
                               </svg>
                           </div>
                           <h3 class="card-title">Flexible Contributions</h3>
@@ -283,14 +239,10 @@
                       </div>
                       <div class="card">
                           <div class="card-icon">
-                              <!-- Mobile phone with signal (inspired by 📱) -->
-                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
                                   <path d="M12 18h.01"/>
-                                  <path d="M8 6h8"/>
-                                  <path d="M8 10h8"/>
-                                  <path d="M8 14h5"/>
                               </svg>
                           </div>
                           <h3 class="card-title">Mobile-First Design</h3>
@@ -299,12 +251,10 @@
                       </div>
                       <div class="card">
                           <div class="card-icon">
-                              <!-- Graduation cap with shield (inspired by 🎓) -->
-                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
-  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                                   <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                                  <circle cx="12" cy="12" r="2"/>
                               </svg>
                           </div>
                           <h3 class="card-title">Student-Friendly</h3>
