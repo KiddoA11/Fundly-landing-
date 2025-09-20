@@ -1,4 +1,4 @@
-  // ===== FUNDLY LANDING PAGE - APP.JS ===== //
+// ===== FUNDLY LANDING PAGE - APP.JS ===== //
 
   document.addEventListener('DOMContentLoaded', function() {
       // Check for reduced motion preference
