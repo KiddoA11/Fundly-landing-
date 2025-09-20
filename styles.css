@@ -913,4 +913,15 @@
       background-color: var(--green-600);
       color: white;
     }
-  }
+  
+/* Force larger logo */
+.nav-logo {
+  height: 64px !important;   /* make this bigger until happy */
+  width: auto !important;
+}
+
+/* Force larger hero icon if you kept it */
+.hero-logo-icon {
+  height: 64px !important;
+  width: auto !important;
+}
