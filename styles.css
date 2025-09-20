@@ -471,16 +471,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
+    gap: 4px;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
     border-bottom: 1px solid var(--border-light);
   }
 
   .app-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     margin: 0 auto;
     display: block;
   }
@@ -489,7 +489,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--green-700);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .collection-card {
@@ -500,9 +500,10 @@
   }
 
   .collection-title {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--green-700);
     margin-bottom: var(--spacing-sm);
+    font-weight: 600;
   }
 
   .members {
@@ -780,9 +781,9 @@
     }
 
     .app-icon {
-      width: 84px;
-      height: 84px;
-      border-radius: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
     }
   }
 
@@ -810,9 +811,9 @@
     }
 
     .app-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
     }
   }
 
@@ -840,15 +841,15 @@
     }
 
     .app-icon {
-      width: 108px;
-      height: 108px;
-      border-radius: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
     }
   }
 
   @media (min-width: 1200px) {
     .cards {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .nav-logo {
@@ -857,9 +858,9 @@
     }
 
     .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 26px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
     }
   }
 
