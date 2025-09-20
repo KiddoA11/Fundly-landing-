@@ -1,4 +1,4 @@
-/* ===== CSS VARIABLES ===== */
+  /* ===== CSS VARIABLES ===== */
   :root {
     --green-600: #2d6a4f;
     --green-700: #1b4332;
@@ -158,8 +158,8 @@
   }
 
   .nav-logo {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 48px;
     border-radius: 6px;
   }
 
@@ -234,6 +234,14 @@
     display: grid;
     gap: var(--spacing-xl);
     align-items: center;
+  }
+
+  .hero-logo-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+    display: block;
   }
 
   .hero-title {
@@ -469,27 +477,28 @@
 
   .app-bar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 6px;
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    padding: 24px 16px;
+    margin-bottom: 20px;
     border-bottom: 1px solid var(--border-light);
   }
 
   .app-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 84px;
+    height: 72px;
+    border-radius: 18px;
     margin: 0 auto;
     display: block;
   }
 
   .app-title {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 22px;
+    margin-left: 12px;
     color: var(--green-700);
-    font-size: 0.875rem;
   }
 
   .collection-card {
@@ -500,10 +509,10 @@
   }
 
   .collection-title {
-    font-size: 1rem;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--green-700);
-    margin-bottom: var(--spacing-sm);
-    font-weight: 600;
+    margin-bottom: 16px;
   }
 
   .members {
@@ -519,8 +528,8 @@
   }
 
   .avatar {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background-color: var(--green-600);
     color: white;
     border-radius: 50%;
@@ -532,8 +541,8 @@
   }
 
   .avatar-more {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background-color: var(--brown-pot);
     color: white;
     border-radius: 50%;
@@ -774,17 +783,6 @@
     .step {
       gap: var(--spacing-xl);
     }
-
-    .nav-logo {
-      width: 36px;
-      height: 36px;
-    }
-
-    .app-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 13px;
-    }
   }
 
   @media (min-width: 768px) {
@@ -803,17 +801,6 @@
 
     .cards {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    .nav-logo {
-      width: 40px;
-      height: 40px;
-    }
-
-    .app-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
     }
   }
 
@@ -834,33 +821,11 @@
     .card {
       padding: var(--spacing-xl);
     }
-
-    .nav-logo {
-      width: 44px;
-      height: 44px;
-    }
-
-    .app-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 15px;
-    }
   }
 
   @media (min-width: 1200px) {
     .cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .nav-logo {
-      width: 48px;
-      height: 48px;
-    }
-
-    .app-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -914,4 +879,3 @@
       color: white;
     }
   }
-
