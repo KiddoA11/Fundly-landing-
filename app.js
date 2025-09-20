@@ -1,9 +1,8 @@
-// ===== FUNDLY LANDING PAGE - APP.JS ===== //
+  // ===== FUNDLY LANDING PAGE - APP.JS ===== //
 
   document.addEventListener('DOMContentLoaded', function() {
       // Check for reduced motion preference
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: 
-  reduce)').matches;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // ===== STICKY HEADER SCROLL SHADOW ===== //
       const header = document.querySelector('.header');
@@ -197,8 +196,8 @@
               } catch (error) {
                   // Network or other error - inline message
                   console.error('Form submission error:', error);
-                  showFormStatus(form, 'Something went wrong saving your signup. Please try 
-  again in a moment.', 'error');
+                  showFormStatus(form, 'Something went wrong saving your signup. Please try again in 
+  a moment.', 'error');
               } finally {
                   // Reset button state
                   submitButton.querySelector('span').textContent = originalButtonText;
@@ -284,8 +283,8 @@
           cards.forEach((card, index) => {
               card.style.opacity = '0';
               card.style.transform = 'translateY(20px)';
-              card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease 
-  ${index * 0.1}s`;
+              card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index
+   * 0.1}s`;
               fadeInObserver.observe(card);
           });
 
@@ -294,8 +293,8 @@
           faqElements.forEach((item, index) => {
               item.style.opacity = '0';
               item.style.transform = 'translateY(20px)';
-              item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease 
-  ${index * 0.1}s`;
+              item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index
+   * 0.1}s`;
               fadeInObserver.observe(item);
           });
       }
@@ -377,8 +376,7 @@
       if (console && console.log) {
           console.log('%cFundly Landing Page', 'color: #2d6a4f; font-size: 18px; font-weight: 
   bold;');
-          console.log('%cSave Smarter, Together.', 'color: #1b4332; font-size: 14px;');
-          console.log('%cLanding page initialized successfully!', 'color: #666; font-size: 
-  12px;');
+          console.log('%cMaking Saving Social.', 'color: #1b4332; font-size: 14px;');
+          console.log('%cLanding page initialized successfully!', 'color: #666; font-size: 12px;');
       }
   });
