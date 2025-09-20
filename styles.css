@@ -29,8 +29,10 @@
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0,
+  0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,
+   0, 0, 0.05);
 
     /* Colors for contrast AA */
     --text-primary: var(--ink);
@@ -158,7 +160,7 @@
   }
 
   .nav-logo {
-    width: 56px;
+    width: 68px;
     height: 48px;
     border-radius: 6px;
   }
@@ -223,7 +225,8 @@
 
   /* ===== HERO SECTION ===== */
   .hero {
-    background: linear-gradient(135deg, var(--ivory) 0%, var(--green-100) 100%);
+    background: linear-gradient(135deg, var(--ivory) 0%, var(--green-100)
+  100%);
     padding: var(--spacing-xl) 0;
     min-height: 80vh;
     display: flex;
@@ -614,7 +617,76 @@
     cursor: pointer;
   }
 
-  /* ===== STEPPER ===== */
+  /* ===== STEPPER - SIX STEPS ===== */
+  .stepper-six {
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .step-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .step-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--green-600);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--green-100);
+    color: var(--green-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+    padding-top: 4px;
+  }
+
+  .step-title {
+    color: var(--green-700);
+    margin-bottom: var(--spacing-sm);
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+  }
+
+  .step-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* Keep the original stepper for backward compatibility */
   .stepper {
     display: flex;
     flex-direction: column;
@@ -630,7 +702,7 @@
     padding: var(--spacing-lg) 0;
   }
 
-  .step-number {
+  .step .step-number {
     width: 48px;
     height: 48px;
     background-color: var(--green-600);
@@ -647,18 +719,18 @@
     position: relative;
   }
 
-  .step-content {
+  .step .step-content {
     flex: 1;
     padding-top: 8px;
   }
 
-  .step-title {
+  .step .step-title {
     color: var(--green-700);
     margin-bottom: var(--spacing-sm);
     font-size: clamp(1.125rem, 3vw, 1.375rem);
   }
 
-  .step-text {
+  .step .step-text {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 0;
@@ -783,6 +855,10 @@
     .step {
       gap: var(--spacing-xl);
     }
+
+    .stepper-six {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (min-width: 768px) {
@@ -800,6 +876,12 @@
     }
 
     .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .stepper-six {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -845,6 +927,10 @@
       transform: none;
     }
 
+    .step-card:hover {
+      transform: none;
+    }
+
     .btn:hover {
       transform: none;
     }
@@ -866,6 +952,10 @@
   /* ===== HIGH CONTRAST MODE ===== */
   @media (prefers-contrast: high) {
     .card {
+      border: 2px solid var(--green-600);
+    }
+
+    .step-card {
       border: 2px solid var(--green-600);
     }
 
