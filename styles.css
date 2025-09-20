@@ -1,4 +1,4 @@
-  /* ===== CSS VARIABLES ===== */
+/* ===== CSS VARIABLES ===== */
   :root {
     --green-600: #2d6a4f;
     --green-700: #1b4332;
@@ -471,16 +471,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    margin-bottom: var(--spacing-sm);
-    padding-bottom: var(--spacing-xs);
+    gap: 6px;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
     border-bottom: 1px solid var(--border-light);
   }
 
   .app-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
@@ -489,7 +489,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--green-700);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .collection-card {
@@ -500,7 +500,7 @@
   }
 
   .collection-title {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--green-700);
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
@@ -781,9 +781,9 @@
     }
 
     .app-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
     }
   }
 
@@ -811,9 +811,9 @@
     }
 
     .app-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
     }
   }
 
@@ -841,9 +841,9 @@
     }
 
     .app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
     }
   }
 
@@ -858,9 +858,9 @@
     }
 
     .app-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
     }
   }
 
