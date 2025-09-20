@@ -158,8 +158,8 @@
   }
 
   .nav-logo {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     border-radius: 6px;
   }
 
@@ -234,14 +234,6 @@
     display: grid;
     gap: var(--spacing-xl);
     align-items: center;
-  }
-
-  .hero-logo-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 8px;
-    margin-bottom: var(--spacing-md);
-    display: block;
   }
 
   .hero-title {
@@ -486,9 +478,9 @@
   }
 
   .app-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
     margin: 0 auto;
     display: block;
   }
@@ -497,6 +489,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--green-700);
+    font-size: 0.875rem;
   }
 
   .collection-card {
@@ -525,8 +518,8 @@
   }
 
   .avatar {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     background-color: var(--green-600);
     color: white;
     border-radius: 50%;
@@ -538,8 +531,8 @@
   }
 
   .avatar-more {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     background-color: var(--brown-pot);
     color: white;
     border-radius: 50%;
@@ -780,6 +773,17 @@
     .step {
       gap: var(--spacing-xl);
     }
+
+    .nav-logo {
+      width: 36px;
+      height: 36px;
+    }
+
+    .app-icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 20px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -798,6 +802,17 @@
 
     .cards {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
     }
   }
 
@@ -818,11 +833,33 @@
     .card {
       padding: var(--spacing-xl);
     }
+
+    .nav-logo {
+      width: 44px;
+      height: 44px;
+    }
+
+    .app-icon {
+      width: 108px;
+      height: 108px;
+      border-radius: 24px;
+    }
   }
 
   @media (min-width: 1200px) {
     .cards {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .nav-logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 26px;
     }
   }
 
