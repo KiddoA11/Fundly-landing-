@@ -1,10 +1,15 @@
   document.addEventListener('DOMContentLoaded', function() {
-      // Mobile Navigation Toggle
+      // Get all necessary elements
       const navToggle = document.querySelector('.nav-toggle');
       const navLinks = document.querySelector('.nav-links');
+      const header = document.querySelector('.header');
+      const navLogo = document.querySelector('.nav-logo');
+      const navWordmark = document.querySelector('.nav-wordmark');
 
+      // Mobile Navigation Toggle
       if (navToggle && navLinks) {
-          navToggle.addEventListener('click', function() {
+          navToggle.addEventListener('click', function(e) {
+              e.stopPropagation();
               const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
               navToggle.setAttribute('aria-expanded', !isExpanded);
               navLinks.classList.toggle('nav-open');
@@ -20,7 +25,6 @@
       }
 
       // Header scroll effect
-      const header = document.querySelector('.header');
       if (header) {
           window.addEventListener('scroll', function() {
               if (window.scrollY > 10) {
@@ -57,6 +61,36 @@
               }
           });
       });
+
+      // Scroll to top functionality
+      function scrollToTop(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close mobile nav if open
+          if (navToggle && navLinks && navLinks.classList.contains('nav-open')) {
+              navToggle.setAttribute('aria-expanded', 'false');
+              navLinks.classList.remove('nav-open');
+          }
+
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+
+      // Add click handlers to logo and wordmark
+      if (navLogo) {
+          navLogo.addEventListener('click', scrollToTop);
+          navLogo.style.cursor = 'pointer';
+          navLogo.style.userSelect = 'none';
+      }
+
+      if (navWordmark) {
+          navWordmark.addEventListener('click', scrollToTop);
+          navWordmark.style.cursor = 'pointer';
+          navWordmark.style.userSelect = 'none';
+      }
 
       // Email validation
       function isValidEmail(email) {
@@ -160,29 +194,9 @@
           }
       });
 
-      // Add click functionality to logo and brand name to scroll to top
-      const navLogo = document.querySelector('.nav-logo');
-      const navWordmark = document.querySelector('.nav-wordmark');
-
-      function scrollToTop(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-          });
-      }
-
-      // Add click handlers to both logo and wordmark individually (not the container)
-      if (navLogo) {
-          navLogo.addEventListener('click', scrollToTop);
-          navLogo.style.cursor = 'pointer';
-      }
-
-      if (navWordmark) {
-          navWordmark.addEventListener('click', scrollToTop);
-          navWordmark.style.cursor = 'pointer';
-      }
-
       console.log('Fundly Landing Page - JavaScript loaded successfully!');
+      console.log('Nav toggle found:', !!navToggle);
+      console.log('Nav links found:', !!navLinks);
+      console.log('Nav logo found:', !!navLogo);
+      console.log('Nav wordmark found:', !!navWordmark);
   });
