@@ -5,14 +5,16 @@
 
       if (navToggle && navLinks) {
           navToggle.addEventListener('click', function() {
-              const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+              const isExpanded = navToggle.getAttribute('aria-expanded') ===
+   'true';
               navToggle.setAttribute('aria-expanded', !isExpanded);
               navLinks.classList.toggle('nav-open');
           });
 
           // Close nav when clicking outside
           document.addEventListener('click', function(e) {
-              if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+              if (!navToggle.contains(e.target) &&
+  !navLinks.contains(e.target)) {
                   navToggle.setAttribute('aria-expanded', 'false');
                   navLinks.classList.remove('nav-open');
               }
@@ -48,7 +50,8 @@
 
                   // Smooth scroll to target
                   const headerHeight = header ? header.offsetHeight : 0;
-                  const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                  const targetPosition = targetElement.offsetTop -
+  headerHeight - 20;
 
                   window.scrollTo({
                       top: targetPosition,
@@ -92,19 +95,22 @@
               const email = emailInput.value.trim();
 
               if (!email) {
-                  showFormStatus(form, 'Please enter your email address.', 'error');
+                  showFormStatus(form, 'Please enter your email address.',
+  'error');
                   emailInput.focus();
                   return;
               }
 
               if (!isValidEmail(email)) {
-                  showFormStatus(form, 'Please enter a valid email address.', 'error');
+                  showFormStatus(form, 'Please enter a valid email 
+  address.', 'error');
                   emailInput.focus();
                   return;
               }
 
               // Show loading state
-              const originalButtonText = submitButton.querySelector('span').textContent;
+              const originalButtonText =
+  submitButton.querySelector('span').textContent;
               submitButton.querySelector('span').textContent = 'Joining...';
               submitButton.disabled = true;
 
@@ -121,8 +127,8 @@
               })
               .then(function(response) {
                   if (response.ok) {
-                      showFormStatus(form, 'Thanks for signing up! Please check your email.',
-  'success');
+                      showFormStatus(form, 'Thanks for signing up! Please 
+  check your email.', 'success');
                       emailInput.value = '';
                   } else {
                       throw new Error('Network response was not ok');
@@ -130,11 +136,12 @@
               })
               .catch(function(error) {
                   console.error('Form submission error:', error);
-                  showFormStatus(form, 'Something went wrong. Please try again in a moment.',
-  'error');
+                  showFormStatus(form, 'Something went wrong. Please try 
+  again in a moment.', 'error');
               })
               .finally(function() {
-                  submitButton.querySelector('span').textContent = originalButtonText;
+                  submitButton.querySelector('span').textContent =
+  originalButtonText;
                   submitButton.disabled = false;
               });
           });
@@ -161,6 +168,35 @@
               navLinks.classList.remove('nav-open');
           }
       });
+
+      // Add click functionality to logo and brand name to scroll to top
+      const navLogo = document.querySelector('.nav-logo');
+      const navWordmark = document.querySelector('.nav-wordmark');
+      const navBrand = document.querySelector('.nav-brand');
+
+      function scrollToTop() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+
+      // Add click handlers to both logo and wordmark
+      if (navLogo) {
+          navLogo.addEventListener('click', scrollToTop);
+          navLogo.style.cursor = 'pointer';
+      }
+
+      if (navWordmark) {
+          navWordmark.addEventListener('click', scrollToTop);
+          navWordmark.style.cursor = 'pointer';
+      }
+
+      // Also add click handler to the entire brand container for better UX
+      if (navBrand) {
+          navBrand.addEventListener('click', scrollToTop);
+          navBrand.style.cursor = 'pointer';
+      }
 
       console.log('Fundly Landing Page - JavaScript loaded successfully!');
   });
