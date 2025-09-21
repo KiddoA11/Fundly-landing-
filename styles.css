@@ -1,4 +1,4 @@
-  /* ===== CSS VARIABLES ===== */
+ /* ===== CSS VARIABLES ===== */
   :root {
     --green-600: #2d6a4f;
     --green-700: #1b4332;
@@ -66,6 +66,11 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  img.nav-logo {
+    height: 80px;
+    max-width: none;
   }
 
   a {
@@ -158,8 +163,8 @@
   }
 
   .nav-logo {
-    width: 100px;  
-    height: 80px;  
+    width: 100px;
+    height: 80px;
     border-radius: 6px;
   }
 
