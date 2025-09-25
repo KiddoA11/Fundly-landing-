@@ -76,7 +76,6 @@
     box-shadow: none;
     object-fit: contain;
     border-radius: 8px;
-    mix-blend-mode: screen;
   }
 
   a {
