@@ -68,13 +68,15 @@
     display: block;
   }
 
-   img.nav-logo {
-    width: auto;
+    img.nav-logo {
+    width: 80px;
     height: 60px;
-    max-width: 80px;
-    background: transparent;
+    max-width: none;
+    background: transparent !important;
     box-shadow: none;
     object-fit: contain;
+    border-radius: 8px;
+    mix-blend-mode: screen;
   }
 
   a {
